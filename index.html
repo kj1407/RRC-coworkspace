@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRC Co-Workspace | Work. Connect. Grow.</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-white" href="#">
+            <img src="src/img/logo.png" alt="RRC Co-Workspace Logo" class="d-inline-block align-text-top me-2">
+        </span></a>
+        
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <i class="fas fa-bars text-white fs-2"></i>
+        </button>
+
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header border-bottom border-secondary">
+                <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">RRC MENU</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#facilities">Workspace</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#plans">Plans</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#community">Community</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a href="booking.html" class="btn btn-warning px-4 w-100 w-lg-auto">Book a Desk</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+    <header id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="carousel-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80');">
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="col-lg-7 text-white animate__animated animate__fadeInLeft">
+                        <h1 class="display-3 fw-bold mb-3">Work. Connect. Grow.</h1>
+                        <p class="fs-5 mb-4 opacity-75">Premium co-working destination and startup ecosystem in Thanjavur.</p>
+                        <div class="d-flex gap-3">
+                            <a href="booking.html" class="btn btn-warning btn-lg px-5">Book a Desk</a>
+                            <a href="#facilities" class="btn btn-outline-light btn-lg">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item active">
+            <div class="carousel-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80');">
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="col-lg-7 text-white animate__animated animate__fadeInLeft">
+                        <h1 class="display-3 fw-bold mb-3">Work. Connect. Grow.</h1>
+                        <p class="fs-5 mb-4 opacity-75">Premium co-working destination and startup ecosystem in Thanjavur.</p>
+                        <div class="d-flex gap-3">
+                            <a href="booking.html" class="btn btn-warning btn-lg px-5">Book a Desk</a>
+                            <a href="#facilities" class="btn btn-outline-light btn-lg">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item active">
+            <div class="carousel-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80');">
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="col-lg-7 text-white animate__animated animate__fadeInLeft">
+                        <h1 class="display-3 fw-bold mb-3">Work. Connect. Grow.</h1>
+                        <p class="fs-5 mb-4 opacity-75">Premium co-working destination and startup ecosystem in Thanjavur.</p>
+                        <div class="d-flex gap-3">
+                            <a href="booking.html" class="btn btn-warning btn-lg px-5">Book a Desk</a>
+                            <a href="#facilities" class="btn btn-outline-light btn-lg">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+</header>
+
+    <div class="d-none d-lg-block d-xl-block bg-white py-3 border-bottom shadow-sm">
+        <div class="container d-flex justify-content-around text-secondary fw-bold flex-wrap text-center mt-2 gap-2">
+            <span><i class="fas fa-desktop me-2 text-primary"></i><p> 50+ Desks</p></span>
+            <span><i class="fas fa-door-open me-2 text-primary"></i><p> 2 Meeting Rooms</p></span>
+            <span><i class="fas fa-wifi me-2 text-primary"></i>
+                <p> 24/7 High-Speed WiFi</p></span>
+            <span><i class="fas fa-car me-2 text-primary"></i><p> Free Parking</p></span>
+        </div>
+    </div>
+    <div class="d-none d-sm-block d-md-none bg-white py-3 border-bottom shadow-sm">
+        <div class="container d-flex justify-content-around text-secondary fw-bold flex-wrap text-center mt-2 gap-2">
+            <span><i class="fas fa-desktop me-2 text-primary"></i><p> 50+ Desks</p></span>
+            <span><i class="fas fa-door-open me-2 text-primary"></i><p> 2 Meeting Rooms</p></span>
+            <span><i class="fas fa-wifi me-2 text-primary"></i>
+                <p> 24/7 High-Speed <br>WiFi</p></span>
+            <span><i class="fas fa-car me-2 text-primary"></i><p> Free Parking</p></span>
+        </div>
+    </div>
+
+    <section id="facilities" class="container py-5">
+    <h2 class="text-center fw-bold mb-5">Facilities</h2>
+    
+    <div class="row g-3 text-center">
+        <div class="col-6 col-md-3 mb-3">
+            <div class="facility-card shadow d-flex flex-column flex-md-row align-items-center justify-content-center">
+                <i class="fas fa-wifi"></i> 
+                <span class="fw-bold text-primary mt-2 mt-md-0 ms-md-3">High-Speed WiFi</span>
+            </div>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+            <div class="facility-card shadow d-flex flex-column flex-md-row align-items-center justify-content-center">
+                <i class="fas fa-laptop"></i> 
+                <span class="fw-bold text-primary mt-2 mt-md-0 ms-md-3">Dedicated Desks</span>
+            </div>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+            <div class="facility-card shadow d-flex flex-column flex-md-row align-items-center justify-content-center">
+                <i class="fa-solid fa-video"></i>
+                <span class="fw-bold text-primary mt-2 mt-md-0 ms-md-3">CCTV Security</span>
+            </div>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+            <div class="facility-card shadow d-flex flex-column flex-md-row align-items-center justify-content-center">
+                <i class="fas fa-users"></i> 
+                <span class="fw-bold text-primary mt-2 mt-md-0 ms-md-3">Meeting Rooms</span>
+            </div>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+            <div class="facility-card shadow d-flex flex-column flex-md-row align-items-center justify-content-center">
+                <i class="fas fa-mug-hot"></i> 
+                <span class="fw-bold text-primary mt-2 mt-md-0 ms-md-3">Coffee & Snacks</span>
+            </div>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+            <div class="facility-card shadow d-flex flex-column flex-md-row align-items-center justify-content-center">
+                <i class="fas fa-print"></i> 
+                <span class="fw-bold text-primary mt-2 mt-md-0 ms-md-3">PrintLab / Printery</span>
+            </div>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+            <div class="facility-card shadow d-flex flex-column flex-md-row align-items-center justify-content-center">
+                <i class="fas fa-car"></i> 
+                <span class="fw-bold text-primary mt-2 mt-md-0 ms-md-3">Free Parking</span>
+            </div>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+            <div class="facility-card shadow d-flex flex-column flex-md-row align-items-center justify-content-center">
+                <i class="fas fa-clock"></i> 
+                <span class="fw-bold text-primary mt-2 mt-md-0 ms-md-3">24/7 Access</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="plans" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Workspace Options</h2>
+            <div class="row g-4">
+                <div class="col-md-4 col-sm-6">
+                    <div class="plan-card bg-white p-4 text-center h-100">
+                        <h4 class="fw-bold">Hot Desk</h4>
+                        <p class="price-tag">₹4,000</p>
+                        <p class="text-muted small">Flexible Seating</p>
+                        <a href="booking.html" class="btn btn-warning btn-lg px-5">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="plan-card bg-white p-4 text-center h-100 border-primary border-2">
+                        <h4 class="fw-bold">Dedicated Desk</h4>
+                        <p class="price-tag">₹7,000</p>
+                        <p class="text-muted small">Your Own Desk</p>
+                        <a href="booking.html" class="btn btn-warning btn-lg px-5">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="plan-card bg-white p-4 text-center h-100">
+                        <h4 class="fw-bold">Private Cabin</h4>
+                        <p class="price-tag">₹15,000</p>
+                        <p class="text-muted small">Your Own Private Space</p>
+                        <a href="booking.html" class="btn btn-warning btn-lg px-5">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="plan-card bg-white p-4 text-center h-100">
+                        <h4 class="fw-bold">Day Pass</h4>
+                        <p class="price-tag">₹500</p>
+                        <p class="text-muted small">Access to Workspace for the Day</p>
+                        <a href="booking.html" class="btn btn-warning btn-lg px-5">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="plan-card bg-white p-4 text-center h-100">
+                        <h4 class="fw-bold">Meeting Room</h4>
+                        <p class="price-tag">₹1,000</p>
+                        <p class="text-muted small">Book a private meeting room for your team</p>
+                        <a href="#booking" class="btn btn-warning btn-lg px-5">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="container py-5">
+    <h2 class="text-center fw-bold mb-5">Community Events</h2>
+    <div class="row g-4">
+        <div class="col-md-3 col-sm-7">
+            <div class="card community-card border-0 shadow-sm overflow-hidden">
+                <div class="position-relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Workspace">
+                    <div class="card-overlay">
+                        <h5 class="fw-bold mb-0">Workspace</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-5">
+            <div class="card community-card border-0 shadow-sm overflow-hidden">
+                <div class="position-relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Meeting Rooms">
+                    <div class="card-overlay">
+                        <h5 class="fw-bold mb-0">Meeting Rooms</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-7">
+            <div class="card community-card border-0 shadow-sm overflow-hidden">
+                <div class="position-relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Events">
+                    <div class="card-overlay">
+                        <h5 class="fw-bold mb-0">Hackathons</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-md-6 col-sm-5">
+            <div class="card community-card border-0 shadow-sm overflow-hidden">
+                <div class="position-relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Events">
+                    <div class="card-overlay">
+                        <h5 class="fw-bold mb-0">Startup Meetup</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-5">
+            <div class="card community-card border-0 shadow-sm overflow-hidden">
+                <div class="position-relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Events">
+                    <div class="card-overlay">
+                        <h5 class="fw-bold mb-0">Workshops</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-md-3 col-sm-7">
+            <div class="card community-card border-0 shadow-sm overflow-hidden">
+                <div class="position-relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Events">
+                    <div class="card-overlay">
+                        <h5 class="fw-bold mb-0">Events</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+    </div>
+</section>
+
+    <section id="gallery" class="container py-5">
+        <h2 class="text-center fw-bold mb-5">Workspace Gallery</h2>
+        <div class="row g-3">
+            <div class="col-md-6 col-lg-4 col-sm-4">
+                <div class="gallery-item rounded-3 overflow-hidden shadow-sm">
+                    <img src="./src/img/gallery/IMG_20260310_112644.jpg" alt="Main Office Area" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-sm-4">
+                <div class="gallery-item rounded-3 overflow-hidden shadow-sm">
+                    <img src="./src/img/gallery/IMG_20260310_112418.jpg" alt="Tech Setup" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-sm-4">
+                <div class="gallery-item rounded-3 overflow-hidden shadow-sm">
+                    <img src="./src/img/gallery/IMG_20260310_112717.jpg" alt="Meeting Room" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-sm-4">
+                <div class="gallery-item rounded-3 overflow-hidden shadow-sm">
+                    <img src="./src/img/gallery/IMG_20260310_110840.jpg" alt="Collaboration Space" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-sm-4">
+                <div class="gallery-item rounded-3 overflow-hidden shadow-sm">
+                    <img src="./src/img/gallery/IMG_20260310_112210.jpg" alt="Lounge Area" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-sm-4">
+                <div class="gallery-item rounded-3 overflow-hidden shadow-sm">
+                    <img src="./src/img/gallery/IMG_20260310_111130.jpg" alt="Private Cabin" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        
+        <div class="position-relative mt-4"> 
+            <div class="position-absolute top-0 start-50 translate-middle-x">
+                <a href="./workspace gallery.html" class="btn btn-warning btn-lg px-5">View More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="container py-5">
+        <h2 class="text-center fw-bold mb-5">Book Meeting Room</h2>
+        <div class="booking-container shadow-sm border bg-light p-4 rounded-4">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label fw-bold small text-uppercase">Full Name</label>
+                    <input type="text" id="userName" class="form-control" placeholder="Enter your name">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label fw-bold small text-uppercase">Phone Number</label>
+                    <input type="tel" id="userPhone" class="form-control" placeholder="+91 00000 00000">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label fw-bold small text-uppercase">Email ID</label>
+                    <input type="email" id="userEmail" class="form-control" placeholder="name@example.com">
+                </div>
+
+                <div class="col-md-3">
+                    <label class="form-label fw-bold small text-uppercase">Select Date</label>
+                    <input type="date" id="bookDate" class="form-control">
+                </div>
+                
+                <div class="col-md-4">
+                    <label class="form-label fw-bold small text-uppercase">Time Duration</label>
+                    <div class="input-group">
+                        <input type="time" id="startTime" class="form-control" title="Start Time">
+                        <span class="input-group-text">to</span>
+                        <input type="time" id="endTime" class="form-control" title="End Time">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <label class="form-label fw-bold small text-uppercase d-block text-center">Select Room</label>
+                    <div class="btn-group w-100">
+                        <input type="radio" class="btn-check" name="room" id="r1" value="Small Room" checked>
+                        <label class="btn btn-outline-primary" for="r1">Small Room</label>
+                        <input type="radio" class="btn-check" name="room" id="r2" value="Conference Room">
+                        <label class="btn btn-outline-primary" for="r2">Conference</label>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <label class="form-label d-none d-md-block">&nbsp;</label> <button class="btn btn-warning w-100 py-2 shadow-sm" onclick="confirmBooking()">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container py-5">
+        <h2 class="text-center fw-bold mb-5">Find Us</h2>
+        <div class="row g-0 rounded-4 overflow-hidden border shadow-sm">
+            <div class="col-md-7">
+                <div class="ratio ratio-16x9 h-100">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125322.44173121575!2d79.3175!3d10.96!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a55331e345e54d3%3A0x63363364f3d8f80c!2sKumbakonam%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="col-md-5 bg-white p-5">
+                <h4 class="fw-bold mb-4 text-primary">RRC Co-Workspace</h4>
+                <p><i class="fas fa-map-marker-alt text-warning me-2"></i> Thanjavur</p>
+                <p><i class="fas fa-phone-alt text-warning me-2"></i> +91 98765 43210</p>
+                <p><i class="fas fa-envelope text-warning me-2"></i> info@rrcworkspace.com</p>
+                <hr>
+                <div class="social-links mt-4 fs-4">
+                    <a href="#" class="text-dark me-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-dark me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-5 pb-3 mt-5">
+    <div class="container">
+        <div class="row mb-5 pb-4 border-bottom border-secondary">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h3 class="fw-bold text-warning mb-3">Our Vision</h3>
+                <p class="lead opacity-75">
+                    To build a comprehensive startup ecosystem in Thanjavur, bridging the gap between great ideas and successful companies through physical, legal, and technical infrastructure.
+                </p>
+            </div>
+            <div class="col-lg-6 text-lg-end d-flex align-items-center justify-content-lg-end">
+                <div>
+                    <h5 class="fw-bold mb-0"></h5>
+                    <p class="small text-info mb-0"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-4 col-lg-3">
+                <h5 class="fw-bold text-warning mb-4">Startup Services</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><i class="fas fa-check-circle text-info me-2"></i>Virtual Office Address</li>
+                    <li><i class="fas fa-check-circle text-info me-2"></i>Startup Registration Help</li>
+                    <li><i class="fas fa-check-circle text-info me-2"></i>GST & PAN/TAN Support</li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+                <h5 class="fw-bold text-warning mb-4">Group Entities</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#" class="text-decoration-none text-white opacity-75"><i class="fas fa-gavel me-2"></i>RRC Law Associates</a></li>
+                    <li><a href="#" class="text-decoration-none text-white opacity-75"><i class="fas fa-code me-2"></i>RRC Technologies</a></li>
+                    <li><a href="#" class="text-decoration-none text-white opacity-75"><i class="fas fa-graduation-cap me-2"></i>Training Programs</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 col-lg-3" id="contact">
+                <h5 class="fw-bold text-warning mb-4">Contact Us</h5>
+                <p class="small mb-2"><i class="fas fa-map-marker-alt me-2"></i> Thanjavur</p>
+                <p class="small mb-2"><i class="fas fa-phone-alt me-2"></i> +91 98765 43210</p>
+                <p class="small"><i class="fas fa-envelope me-2"></i> info@rrcworkspace.com</p>
+            </div>
+
+            <div class="col-lg-3">
+                <h5 class="fw-bold text-warning mb-4">Connect With Us</h5>
+                <div class="d-flex gap-3 fs-4">
+                    <a href="#" class="text-white hover-orange"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white hover-orange"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white hover-orange"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-white hover-orange"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="mt-4">
+                    <a href="booking.html" class="btn btn-warning fw-bold w-100">Start Your Journey</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center pt-4 border-top border-secondary">
+            <p class="small mb-0 opacity-50">© 2026 RRC Co-Workspace Group. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    // Set default date to today
+    document.getElementById('bookDate').valueAsDate = new Date();
+
+    function confirmBooking() {
+        // Fetch values
+        const name = document.getElementById('userName').value;
+        const phone = document.getElementById('userPhone').value;
+        const email = document.getElementById('userEmail').value;
+        const date = document.getElementById('bookDate').value;
+        const start = document.getElementById('startTime').value;
+        const end = document.getElementById('endTime').value;
+        const room = document.querySelector('input[name="room"]:checked').value;
+
+        // Simple Validation
+        if (!name || !phone || !start || !end) {
+            alert("Please fill in all the details to proceed.");
+            return;
+        }
+
+        // Output Confirmation
+        console.log("Booking Details:", { name, phone, email, date, start, end, room });
+        
+        alert(`Thank you, ${name}! \nYour booking for the ${room} from ${start} to ${end} on ${date} has been recorded. Our team will contact you at ${phone} shortly.`);
+        
+        // Optional: Clear form after booking
+        // document.querySelectorAll('input').forEach(input => input.value = '');
+    }
+</script>
+</body>
+</html>

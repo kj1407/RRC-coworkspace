@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Booking | RRC Co-Workspace</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #00305b;
+            --accent-orange: #ff6a00;
+            --light-bg: #f8f9fa;
+        }
+        body { background-color: var(--light-bg); font-family: 'Segoe UI', sans-serif; }
+        .navbar { background-color: var(--primary-blue); }
+        .card { border: none; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .form-label { font-weight: 600; color: var(--primary-blue); font-size: 0.85rem; text-transform: uppercase; }
+        .btn-warning { background-color: var(--accent-orange) !important; color: white !important; font-weight: bold; border: none; padding: 12px; }
+        .summary-box { background-color: white; border-top: 5px solid var(--accent-orange); }
+        .price-text { color: var(--accent-orange); font-weight: 800; font-size: 1.5rem; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-white" href="#">
+            <img src="src/img/logo.png" alt="RRC Co-Workspace Logo" class="d-inline-block align-text-top me-2">
+        </span></a>
+
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header border-bottom border-secondary">
+                <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">RRC MENU</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 align-items-lg-center">
+                    <li class="nav-item">
+                    <i class=""></i>
+                        <a class="fa-solid fa-house nav-link" href="./index.html"> H o m e</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<br>
+<div class="container pb-5">
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="card p-4 p-md-5">
+                <h3 class="fw-bold mb-4" style="color: var(--primary-blue);">Complete Your Booking</h3>
+                <form id="bookingForm">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="Phone" required>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Email ID</label>
+                            <input type="email" class="form-control" placeholder="name@example.com" required>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label class="form-label">Workspace Plan</label>
+                            <select class="form-select" id="planType" onchange="calculateTotal()">
+                                <option value="4000" data-unit="Month">Hot Desk (₹4,000/mo)</option>
+                                <option value="7000" data-unit="Month">Dedicated Desk (₹7,000/mo)</option>
+                                <option value="15000" data-unit="Month">Private Cabin (₹15,000/mo)</option>
+                                <option value="500" data-unit="Day">Day Pass (₹500/day)</option>
+                                <option value="1000" data-unit="Hour">Meeting Room (₹1,000/hr)</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label">Start Date</label>
+                            <input type="date" id="startDate" class="form-control" required>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label" id="durationLabel">Duration</label>
+                            <input type="number" id="duration" class="form-control" value="1" min="1" oninput="calculateTotal()">
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+                    <div class="bg-light p-3 rounded mb-4">
+                        <small class="text-muted d-block mb-2">Power Services Available (Optional):</small>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="vOffice">
+                            <label class="form-check-label small" for="vOffice">Virtual Office Address</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="legal">
+                            <label class="form-check-label small" for="legal">Legal Consultation</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-warning w-100 shadow-sm">PROCEED TO CONFIRMATION</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card summary-box p-4 sticky-top" style="top: 100px;">
+                <h5 class="fw-bold border-bottom pb-3 mb-3" style="color: var(--primary-blue);">Booking Summary</h5>
+                <div class="d-flex justify-content-between mb-3">
+                    <span class="text-muted">Selected Plan:</span>
+                    <span id="sumPlan" class="fw-bold text-dark">Hot Desk</span>
+                </div>
+                <div class="d-flex justify-content-between mb-3">
+                    <span class="text-muted">Rate:</span>
+                    <span id="sumRate" class="fw-bold text-dark">₹4,000</span>
+                </div>
+                <div class="d-flex justify-content-between mb-3">
+                    <span class="text-muted">Booking Period:</span>
+                    <span id="sumPeriod" class="fw-bold text-dark">1 Month</span>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <span class="h5 fw-bold mb-0">Total:</span>
+                    <span id="totalAmount" class="price-text">₹4,000</span>
+                </div>
+                <p class="small text-muted text-center mb-0">
+                    <i class="fas fa-lock me-1"></i> Secure payment processed via RRC Group
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Set today's date
+    document.getElementById('startDate').valueAsDate = new Date();
+
+    function calculateTotal() {
+        const planSelect = document.getElementById('planType');
+        const selectedOption = planSelect.options[planSelect.selectedIndex];
+        
+        const rate = parseInt(planSelect.value);
+        const unit = selectedOption.getAttribute('data-unit');
+        const planName = selectedOption.text.split(' (')[0];
+        const duration = parseInt(document.getElementById('duration').value) || 1;
+
+        // Update labels based on unit
+        document.getElementById('durationLabel').innerText = `Duration (${unit}s)`;
+        
+        // Update Summary Card
+        document.getElementById('sumPlan').innerText = planName;
+        document.getElementById('sumRate').innerText = `₹${rate.toLocaleString()}`;
+        document.getElementById('sumPeriod').innerText = `${duration} ${unit}${duration > 1 ? 's' : ''}`;
+        
+        // Final Calculation
+        const total = rate * duration;
+        document.getElementById('totalAmount').innerText = `₹${total.toLocaleString()}`;
+    }
+
+    // Initial run
+    calculateTotal();
+</script>
+
+</body>
+</html>

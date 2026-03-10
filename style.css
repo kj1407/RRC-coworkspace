@@ -1,0 +1,229 @@
+
+:root {
+    --primary-blue: #004274;
+    --accent-orange: #f39c12;
+    --light-gray: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+/* Navbar Customization */
+.navbar {
+    background-color: transparent !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+.nav-link {
+    color: white !important;
+    margin: 0 10px;
+}
+.nav-link:hover {
+    color: var(--accent-orange) !important;
+}
+.navbar-brand img {
+    max-height: 70px; /* Adjust based on logo visibility */
+    transition: 0.3s ease;
+}
+
+#mainNavbar.scrolled .navbar-brand img {
+    max-height: 55px; /* Shrink logo on scroll */
+}
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: white;
+}
+
+/* Facility Icons */
+.facility-card {
+    padding: 20px;
+    transition: 0.3s;
+}
+.facility-card i {
+    color: var(--primary-blue);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+/* Custom Facility Card Styling */
+
+.facility-card span {
+    font-size: 1.1rem;
+}
+/* Update these styles in your <style> block */
+.facility-card {
+    padding: 20px;
+}
+
+.facility-card i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Slightly smaller for mobile layout */
+    height: 50px;
+    background-color: #f1f6ff;
+    border-radius: 10px;
+    color: var(--primary-blue) !important;
+    font-size: 1.5rem !important;
+    flex-shrink: 0; /* Prevents icon from squishing */
+}
+
+.facility-card span {
+    font-size: 0.9rem; /* Smaller text to ensure it fits on one line if possible */
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .facility-card i {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem !important;
+    }
+    .facility-card span {
+        font-size: 1.1rem;
+    }
+}
+
+/* Pricing Cards */
+.plan-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.price-tag {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+/* Community Card Styling */
+.community-card {
+    border-radius: 15px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy Lift Effect */
+}
+
+.community-card img {
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* The Overlay */
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, var(--primary-blue)); /* Fades into deep navy */
+    color: white;
+    padding: 30px 15px 15px;
+    text-align: center;
+    transform: translateY(10px); /* Small movement offset */
+    opacity: 0.9;
+    transition: all 0.4s ease;
+}
+
+/* Hover Effects */
+.community-card:hover {
+    transform: translateY(-12px); /* Lifts the card */
+    box-shadow: 0 20px 40px rgba(0, 48, 91, 0.2) !important;
+}
+
+.community-card:hover img {
+    transform: scale(1.1); /* Zooms the image */
+}
+
+.community-card:hover .card-overlay {
+    background: rgba(0, 48, 91, 0.85); /* Darkens on hover */
+    transform: translateY(0);
+}
+
+.community-card h5 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+/* Booking Section */
+.booking-container {
+    background-color: var(--light-gray);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.btn-warning {
+    background-color: var(--accent-orange);
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+.btn-warning:hover {
+    background-color: #e67e22;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #ccc;
+}
+
+:root {
+    --primary-blue: #00305b;      /* Deep Navy (Headers/Footers) */
+    --vibrant-blue: #007bff;      /* Icons/Links */
+    --accent-orange: #ff6a00;     /* Call to Action Buttons */
+    --light-gray: #f8f9fa;        /* Section Backgrounds */
+}
+
+/* Typography & Global Styles */
+body { color: #212529; }
+h2, h3 { color: var(--primary-blue); font-weight: 700; }
+
+.btn-warning {
+    background-color: var(--accent-orange) !important;
+    border: none !important;
+    color: #fff !important;
+    transition: 0.3s ease;
+}
+
+.btn-warning:hover {
+    background-color: #e65c00 !important;
+    transform: translateY(-2px);
+}
+
+.text-primary { color: var(--vibrant-blue) !important; }
+
+/* Matching Hero Size to removed background image */
+#heroCarousel, .carousel-item, .carousel-bg {
+    height: 90vh; /* Same size as previous hero */
+    min-height: 500px;
+}
+
+.carousel-bg {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+/* Enhancing the fade transition */
+.carousel-fade .carousel-item {
+    transition-duration: 1s;
+    transition-property: opacity;
+}
+
+/* Carousel Indicators Styling */
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--accent-orange); /* RRC Brand Orange */
+}
