@@ -98,7 +98,7 @@
 </header>
 
     <div class="d-none d-lg-block d-xl-block bg-white py-3 border-bottom shadow-sm">
-        <div class="container d-flex justify-content-around text-secondary fw-bold flex-wrap text-center mt-2 gap-2">
+        <div class="container shadow d-flex justify-content-around text-secondary fw-bold flex-wrap text-center mt-2 gap-2">
             <span><i class="fas fa-desktop me-2 text-primary"></i><p> 50+ Desks</p></span>
             <span><i class="fas fa-door-open me-2 text-primary"></i><p> 2 Meeting Rooms</p></span>
             <span><i class="fas fa-wifi me-2 text-primary"></i>
@@ -308,53 +308,132 @@
     <section id="plans" class="bg-light py-5">
         <div class="container">
             <h2 class="text-center fw-bold mb-5">Workspace Options</h2>
-            <div class="row g-4">
+            <div class="row">
                 <div class="col-md-4 col-sm-6 col-6">
-                    <div class="plan-card bg-white p-4 text-center h-100">
-                        <h4 class="fw-bold">Hot Desk</h4>
-                        <p class="price-tag">₹4,000</p>
-                        <p class="text-muted small">Flexible Seating</p>
-                        <a href="booking.html" class="btn btn-warning btn-lg px-5">Book Now</a>
+                    <div class="flip-card plan-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="bg-white p-4 text-center h-100 mt-4">
+                                    <h4 class="fw-bold">Day Pass</h4>
+                                    <p class="price-tag">₹500 / day</p>
+                                    <a class="btn text-warning fw-bold">View Details</a>
+                                </div>
+                            </div>
+                            <div class="flip-card-back bg-white">
+                                <h5 class="fw-bold text-warning mb-3">What's Included</h5>
+                                    <ul class="list-unstyled mb-4 text-start ms-4 text-secondary">
+                                        <li><i class="fas fa-check text-success me-2"></i>High-Speed Wi-Fi</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Comfortable seating</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Power outlets</li>
+                                    </ul>
+                                    <a href="booking.html" class="btn btn-warning fw-bold">Select Plan</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-6">
-                    <div class="plan-card bg-white p-4 text-center h-100 border-primary border-2">
-                        <h4 class="fw-bold">Dedicated Desk</h4>
-                        <p class="price-tag">₹7,000</p>
-                        <p class="text-muted small">Your Own Desk</p>
-                        <a href="booking.html" class="btn btn-warning btn-lg px-5">Book Now</a>
+                    <div class="flip-card plan-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="bg-white p-4 text-center h-100 mt-4">
+                                    <h4 class="fw-bold">Hot Desk</h4>
+                                    <p class="price-tag">₹4,000</p>
+                                    <a class="btn text-warning fw-bold">View Details</a>
+                                </div>
+                            </div>
+                            <div class="flip-card-back bg-white">
+                                <h5 class="fw-bold text-warning mb-3">What's Included</h5>
+                                    <ul class="list-unstyled mb-4 text-start ms-4 text-secondary">
+                                        <li><i class="fas fa-check text-success me-2"></i>Flexible seating</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>High-Speed WiFi</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Restroom access</li>
+                                    </ul>
+                                    <a href="booking.html" class="btn btn-warning fw-bold">Select Plan</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-6">
-                    <div class="plan-card bg-white p-4 text-center h-100">
-                        <h4 class="fw-bold">Private Cabin</h4>
-                        <p class="price-tag">₹15,000</p>
-                        <p class="text-muted small">Your Own Private Space</p>
-                        <a href="booking.html" class="btn btn-warning btn-lg px-5">Book Now</a>
+                    <div class="flip-card plan-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="bg-white p-4 text-center h-100 mt-4">
+                                    <h4 class="fw-bold">Dedicated Desk</h4>
+                                    <p class="price-tag">₹7,000 / month</p>  
+                                    <a class="btn text-warning fw-bold">View Details</a>
+                                </div>
+                            </div>
+                            <div class="flip-card-back bg-white">
+                                <h5 class="fw-bold text-warning mb-3">What's Included</h5>
+                                    <ul class="list-unstyled mb-4 text-start ms-4 text-secondary">
+                                        <li><i class="fas fa-check text-success me-2"></i>Personal desk</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Locker storage</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>24/7 access</li>
+                                    </ul>
+                                    <a href="booking.html" class="btn btn-warning fw-bold">Select Plan</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-6">
-                    <div class="plan-card bg-white p-4 text-center h-100">
-                        <h4 class="fw-bold">Day Pass</h4>
-                        <p class="price-tag">₹500</p>
-                        <p class="text-muted small">Access to Workspace for the Day</p>
-                        <a href="booking.html" class="btn btn-warning btn-lg px-5">Book Now</a>
+                    <div class="flip-card plan-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="bg-white p-4 text-center h-100 mt-4">
+                                    <h4 class="fw-bold">Private Cabin</h4>
+                                    <p class="price-tag">₹15,000 / month</p>
+                                   <a class="btn text-warning fw-bold">View Details</a>
+                                </div>
+                            </div>
+                            <div class="flip-card-back bg-white">
+                                <h5 class="fw-bold text-warning mb-3">What's Included</h5>
+                                    <ul class="list-unstyled mb-4 text-start ms-4 text-secondary">
+                                        <li><i class="fas fa-check text-success me-2"></i>Private office space</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Team seating</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Secure access</li>
+                                    </ul>
+                                    <a href="booking.html" class="btn btn-warning fw-bold">Select Plan</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-6">
-                    <div class="plan-card bg-white p-4 text-center h-100">
-                        <h4 class="fw-bold">Meeting Room</h4>
-                        <p class="price-tag">₹1,000</p>
-                        <p class="text-muted small">Book a private meeting room for your team</p>
-                        <a href="#booking" class="btn btn-warning btn-lg px-5">Book Now</a>
+                    <div class="flip-card plan-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="bg-white p-4 text-center h-100 mt-4">
+                                    <h4 class="fw-bold">Meeting Room</h4>
+                                    <p class="price-tag">₹1,000</p>
+                                    <a class="btn text-warning fw-bold">View Details</a>
+                                </div>
+                            </div>
+                            <div class="flip-card-back bg-white">
+                                <h5 class="fw-bold text-warning mb-3">What's Included</h5>
+                                    <ul class="list-unstyled mb-4 text-start ms-4 text-secondary">
+                                        <li><i class="fas fa-check text-success me-2"></i>Flexible Seating</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>High-Speed WiFi</li>
+                                        <li><i class="fas fa-check text-success me-2"></i>Coffee & Snacks</li>
+                                    </ul>
+                                    <a href="booking.html" class="btn btn-warning fw-bold">Select Plan</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-6">
-                    <div class="plan-card bg-white p-4 text-center h-100">
-                        <h4 class="fw-bold">Custom Plan</h4>
-                        <p class="price-tag">From ₹499</p>
-                        <p class="text-muted small">Tailor-made workspace solutions for your needs</p>
-                        <a href="#booking" class="btn btn-warning btn-lg px-5">Book Now</a>
+                    <div class="flip-card plan-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="bg-white p-4 text-center h-100 mt-4">
+                                    <h4 class="fw-bold">Custom Plan</h4>
+                                    <p class="price-tag">From ₹999</p>
+                                    <a class="btn text-warning fw-bold">View Details</a>
+                                </div>
+                            </div>
+                            <div class="flip-card-back bg-white">
+                                <h5 class="fw-bold text-warning mb-3">Tailored solutions for special requirements</h5>
+                                    <a href="booking.html" class="btn btn-warning fw-bold">Select Plan</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
