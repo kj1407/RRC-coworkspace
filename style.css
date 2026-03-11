@@ -40,6 +40,15 @@ body {
     color: white;
 }
 
+.pg-size{
+    font-size: 0.8rem;
+}
+.vertical-line {
+  border-left: 3px solid rgb(243, 234, 234); /* Creates a solid black line 3px thick */
+  height: auto;                /* Sets the length of the line */
+}
+
+
 /* Facility Icons */
 .facility-card {
     padding: 20px;

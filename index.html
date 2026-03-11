@@ -98,9 +98,9 @@
         </div>
     </div>
         
-</header>
+    </header>
 
-    <div class="d-none d-lg-block d-xl-block bg-white py-3 border-bottom shadow-sm">
+    <div class="d-none d-md-block d-lg-block d-xl-block bg-white py-3 border-bottom shadow-sm">
         <div class="container shadow d-flex justify-content-around text-secondary fw-bold flex-wrap text-center mt-2 gap-2">
             <span><i class="fas fa-desktop me-2 text-primary"></i><p> 50+ Desks</p></span>
             <span><i class="fas fa-door-open me-2 text-primary"></i><p> 2 Meeting Rooms</p></span>
@@ -109,13 +109,17 @@
             <span><i class="fas fa-car me-2 text-primary"></i><p> Free Parking</p></span>
         </div>
     </div>
-    <div class="d-none d-sm-block d-md-none bg-white py-3 border-bottom shadow-sm">
-        <div class="container d-flex justify-content-around text-secondary fw-bold flex-wrap text-center mt-2 gap-2">
-            <span><i class="fas fa-desktop me-2 text-primary"></i><p> 50+ Desks</p></span>
-            <span><i class="fas fa-door-open me-2 text-primary"></i><p> 2 Meeting Rooms</p></span>
-            <span><i class="fas fa-wifi me-2 text-primary"></i>
-                <p> 24/7 High-Speed <br>WiFi</p></span>
-            <span><i class="fas fa-car me-2 text-primary"></i><p> Free Parking</p></span>
+    <div class="d-block d-md-none bg-white border-bottom shadow-sm">
+        <div class="container d-flex justify-content-around text-secondary fw-bold flex-wrap text-center mt-2 gap-2 h-auto">
+            <div class="d-flex justify-content-around text-secondary fw-bold flex-wrap text-center pg-size mt-2 gap-2 p-2">
+                <span><i class="fas fa-desktop me-2 text-primary mt-4"></i><p> 50+ Desks</p></span>
+                <div class="vertical-line"></div>
+                <span><i class="fas fa-door-open me-2 text-primary mt-4"></i><p> 2 Meeting <br>Rooms</p></span>
+                <div class="vertical-line"></div>
+                <span><i class="fas fa-wifi me-2 text-primary"></i><p> 24/7<br>High-Speed <br>WiFi</p></span>
+                <div class="vertical-line"></div>
+                <span><i class="fas fa-car me-2 text-primary mt-4"></i><p> Free Parking</p></span>
+            </div>   
         </div>
     </div>
 
@@ -174,7 +178,7 @@
         
         <div class="position-relative mt-4"> 
             <div class="position-absolute top-0 start-50 translate-middle-x">
-                <a href="./workspace gallery.html" class="btn btn-warning btn-lg px-5">View More</a>
+                <a href="./workspace gallery.html" class="btn btn-warning btn-lg px-4">View More</a>
             </div>
         </div>
     </section>
@@ -312,7 +316,7 @@
         <div class="container">
             <h2 class="text-center fw-bold mb-5">Workspace Options</h2>
             <div class="row">
-                <div class="col-md-4 col-sm-6 col-6">
+                <div class="col-md-4 col-sm-6 col-6 ">
                     <div class="flip-card plan-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -335,7 +339,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-6">
+                <div class="col-md-4 col-sm-6 col-6 ">
                     <div class="flip-card plan-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -358,7 +362,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-6">
+                <div class="col-md-4 col-sm-6 col-6 ">
                     <div class="flip-card plan-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -381,7 +385,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-6">
+                <div class="col-md-4 col-sm-6 col-6 ">
                     <div class="flip-card plan-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -404,7 +408,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-6">
+                <div class="col-md-4 col-sm-6 col-6 ">
                     <div class="flip-card plan-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -428,7 +432,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-6">
+                <div class="col-md-4 col-sm-6 col-6 ">
                     <div class="flip-card plan-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -454,6 +458,7 @@
                 </div>
             </div>
         </div>
+        
     </section>
 
     <section id="booking" class="container py-5">
@@ -627,6 +632,18 @@
         // Optional: Clear form after booking
         // document.querySelectorAll('input').forEach(input => input.value = '');
     }
+
+    // Auto-close offcanvas when any link inside it is clicked
+        document.querySelectorAll('.offcanvas-body .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const offcanvasElement = document.getElementById('offcanvasNavbar');
+                const box = bootstrap.Offcanvas.getInstance(offcanvasElement);
+                if (box) {
+                    box.hide();
+                }
+            });
+        });
+
 </script>
 
 <a href="https://wa.me/919876543210?text=Hello! I'm interested in booking a desk at RRC Co-Workspace." 
@@ -635,5 +652,7 @@
     <i class="fab fa-whatsapp"></i>
     <span class="float-text">Chat with us</span>
 </a>
+
+
 </body>
 </html>
