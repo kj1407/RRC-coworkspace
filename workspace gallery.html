@@ -89,6 +89,13 @@
 </head>
 <body>
 
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <img src="src/img/logo/Logo.png" alt="RRC HIVE" class="loader-logo ">
+        </div>
+    </div>
+
     <nav class="navbar navbar-expand navbar-dark sticky-top shadow-sm" style="background-color: var(--primary-blue);">
     <div class="container d-flex justify-content-between align-items-center">
         <a class="navbar-brand fw-bold" href="./index.html">
@@ -164,5 +171,16 @@
     img.addEventListener('contextmenu', e => e.preventDefault());
     });
     </script>
+
+<script>
+    window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    
+    // Add a slight delay (500ms) for a smoother feel
+    setTimeout(() => {
+        preloader.classList.add('preloader-hidden');
+    }, 500);
+});
+</script>
 </body>
 </html>

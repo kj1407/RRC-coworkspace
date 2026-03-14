@@ -10,6 +10,58 @@ body {
     color: #333;
 }
 
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Higher than WhatsApp button */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+/* Modern Spinner using your brand Navy */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(27, 54, 93, 0.1);
+    border-top: 5px solid #1B365D;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+.loader-logo {
+    width: 200px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.loader-text {
+    color: #1B365D;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Class to trigger fade out */
+.preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .btn-color{
     background-color: #FDB813 !important;
     background: linear-gradient(rgb(247, 183, 33), rgba(238, 111, 13, 0.977));
