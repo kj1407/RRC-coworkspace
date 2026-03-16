@@ -193,22 +193,6 @@ body {
     }
 }
 
-/* Pricing Cards */
-.plan-card {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-.plan-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-.price-tag {
-    font-size: 1.0rem;
-    font-weight: bold;
-    color: var(--primary-blue);
-}
-
 /* Container for the effect */
 .flip-card {
   background-color: transparent;
@@ -247,7 +231,7 @@ body {
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-radius: 15px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -271,6 +255,28 @@ body {
     z-index: 1;
 }
 
+@media (max-width: 768px) {
+    /* Allow the flip card to be taller on mobile */
+    .flip-card, .flip-card-inner, .flip-card-front, .flip-card-back {
+        height: 320px !important; /* Increase this value until the button fits */
+    }
+
+    /* Adjust the font size slightly so it doesn't wrap as much */
+    .flip-card-back ul li span {
+        font-size: 0.85rem;
+        line-height: 1.2;
+    }
+    
+    /* Reduce margins on mobile to save space */
+    .flip-card-back h5 {
+        margin-bottom: 10px !important;
+    }
+    
+    .flip-card-back ul {
+        margin-bottom: 15px !important;
+        margin-left: 10px !important; /* Move list left to give text more room */
+    }
+}
 @media (max-width: 576px) {
     .flip-card {
         height: 220px;
@@ -283,7 +289,14 @@ body {
         margin-left: 10px !important;
     }
 }
-
+.border-bg-front{
+    border-color: #FDB813;
+    border-width: 8px;
+}
+.border-bg-back{
+    border-color: #1B365D;
+    border-width: 8px;
+}
 /* Community Card Styling */
 .community-card {
     border-radius: 15px;
