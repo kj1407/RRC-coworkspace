@@ -70,6 +70,16 @@ body {
     transition: 0.3s ease;
 }
 
+.view-details{
+    background-color: #FDB813 !important;
+    background: linear-gradient(rgb(247, 183, 33), rgba(238, 111, 13, 0.977));
+    border: none !important;
+    color: #fff !important;
+    transition: 0.3s ease;
+    padding: 6px;
+    border-radius: 6px;
+    
+}
 /* Navbar Customization */
 .navbar {
     background-color: transparent !important;
@@ -291,6 +301,7 @@ body {
 }
 
 .recom{
+    cursor: pointer;
     font-size: 0.9rem;
     text-decoration: none;
 }
