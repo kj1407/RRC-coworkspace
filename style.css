@@ -737,8 +737,8 @@ h2, h3 { color: var(--primary-blue); font-weight: 700; }
     height: 100%;
     /* Gradient: Transparent at top, semi-black at bottom for text legibility */
     display: flex;
-    align-items: center; /* Vertical Center */
-    justify-content: center; /* Horizontal Center */
+    align-items: end; /* Vertical Center */
+    justify-content: left; /* Horizontal Center */
     padding: 20px;
     transition: background 0.3s ease;
 }
