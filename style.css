@@ -746,6 +746,14 @@ body {
     color: white;
 }
 
+.btn-outline-light:hover {
+    border-color: #1B365D !important;
+    background-color: #1B365D !important;
+    color: #FDB813 !important;
+    transition: all 0.3s ease;
+    box-shadow: #1B365D;
+}
+
 /* Footer */
 footer {
     background-color: #222;
@@ -961,9 +969,10 @@ li {
     animation: drawHighlight 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
     animation-delay: 0.5s; /* Starts slightly after page load */
     
-    padding: 2px 4px;
+    padding: 4px 6px;
     display: inline-block;
     font-weight: 600;
+    border-radius: 18px;
 }
 
 .text-shadow {
