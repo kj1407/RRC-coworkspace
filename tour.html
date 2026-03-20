@@ -160,15 +160,23 @@
     });
     </script>
 
-    <script>
+   <script>
+        // Function to hide the loader
+        function hidePreloader() {
+            const preloader = document.getElementById('preloader');
+            if (preloader && !preloader.classList.contains('preloader-hidden')) {
+                preloader.classList.add('preloader-hidden');
+                console.log("Preloader hidden successfully.");
+            }
+        }
+
+        // 1. Hide when everything is finished loading
         window.addEventListener('load', function() {
-        const preloader = document.getElementById('preloader');
-        
-        // Add a slight delay (500ms) for a smoother feel
-        setTimeout(() => {
-            preloader.classList.add('preloader-hidden');
-        }, 500);
-    });
+            setTimeout(hidePreloader, 1000); // 0.5s smooth delay
+        });
+
+        // 2. FAIL-SAFE: If 'load' event doesn't fire, hide it anyway after 3 seconds
+        setTimeout(hidePreloader, 3000);
     </script>
 
 </body>

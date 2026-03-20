@@ -123,7 +123,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 reveal d-2">
+            <div class="col-lg-4">
                 <div class="card summary-box p-4 sticky-top" style="top: 100px;">
                     <h5 class="fw-bold border-bottom pb-3 mb-3" style="color: var(--primary-blue);">Booking Summary</h5>
                     <div class="d-flex justify-content-between mb-3">
@@ -236,6 +236,25 @@
             preloader.classList.add('preloader-hidden');
         }, 500);
     });
+    </script>
+
+    <script>
+        // Function to hide the loader
+        function hidePreloader() {
+            const preloader = document.getElementById('preloader');
+            if (preloader && !preloader.classList.contains('preloader-hidden')) {
+                preloader.classList.add('preloader-hidden');
+                console.log("Preloader hidden successfully.");
+            }
+        }
+
+        // 1. Hide when everything is finished loading
+        window.addEventListener('load', function() {
+            setTimeout(hidePreloader, 3000); // 0.5s smooth delay
+        });
+
+        // 2. FAIL-SAFE: If 'load' event doesn't fire, hide it anyway after 3 seconds
+        setTimeout(hidePreloader, 5000);
     </script>
 
 </body>
