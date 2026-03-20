@@ -170,6 +170,61 @@ body {
     animation: spin 1s linear infinite;
 }
 
+/* Container for alignment */
+.pxs-chips {
+    z-index: 10;
+    position: relative;
+}
+
+/* Individual Chip Style */
+.pxs-chip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Translucent white */
+    backdrop-filter: blur(10px);        /* Blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 20px;
+    border-radius: 50px;                 /* Pill shape */
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+/* Hover effect */
+.pxs-chip:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #FDB813; /* Turns orange on hover */
+    transform: translateY(-2px);
+}
+
+/* The Animated Orange Dot */
+.pxs-cdot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #FDB813; /* Your brand orange */
+    flex-shrink: 0;
+    position: relative;
+    animation: cdotPulse 2s ease-in-out infinite;
+}
+
+/* Pulse Animation */
+@keyframes cdotPulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(255, 106, 0, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(255, 106, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0px rgba(255, 106, 0, 0);
+    }
+}
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
