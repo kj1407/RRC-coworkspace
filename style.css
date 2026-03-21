@@ -567,7 +567,7 @@ body {
 @media (max-width: 768px) {
     /* Allow the flip card to be taller on mobile */
     .flip-card, .flip-card-inner, .flip-card-front, .flip-card-back {
-        height: 220px !important; /* Increase this value until the button fits */
+        height: 240px !important; /* Increase this value until the button fits */
     }
 
     /* Adjust the font size slightly so it doesn't wrap as much */
@@ -588,7 +588,7 @@ body {
 }
 @media (max-width: 576px) {
     .flip-card {
-        height: 220px;
+        height: 240px;
     }
     .flip-card-back h5 {
         font-size: 1rem;
