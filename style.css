@@ -1188,3 +1188,83 @@ li {
         font-size: 0.9rem !important;
     }
 }
+
+/* Specific fixes for iPhone 5/SE (320px width) */
+@media (max-width: 320px) {
+    /* 1. Global Container Padding */
+    .container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    /* 2. Hero Carousel Adjustments */
+    #heroCarousel {
+        height: 60vh !important; /* Slightly taller on small screens to fit text */
+    }
+    
+    #heroCarousel h1 {
+        font-size: 1.4rem !important; /* Smaller headline */
+        line-height: 1.2;
+    }
+
+    #heroCarousel .fs-5 {
+        font-size: 0.85rem !important;
+    }
+
+    /* 3. Trust Chips (Make them wrap better) */
+    .pxs-chips {
+        gap: 8px !important;
+    }
+    
+    .pxs-chip {
+        padding: 6px 12px !important;
+        font-size: 0.7rem !important;
+    }
+
+    /* 4. Grid System - Force 1 column if 2 columns look broken */
+    .col-6 {
+        width: 100% !important; /* Change cards from 2-per-row to 1-per-row */
+        margin-bottom: 15px;
+    }
+
+    /* 5. Section Titles */
+    .section-title span {
+        font-size: 1.5rem !important;
+    }
+
+    /* 6. Gallery Items */
+    .gallery-item {
+        height: 180px !important;
+    }
+
+    /* 7. Floating Action Bar (Essential for iPhone 5) */
+    .mobile-action-bar {
+        width: 95% !important;
+        padding: 8px 15px !important;
+        bottom: 15px !important; /* Move it closer to edge */
+    }
+
+    .action-item i {
+        font-size: 1rem !important;
+    }
+
+    /* 8. Booking Form Fixes */
+    .booking-container {
+        padding: 15px !important;
+    }
+    
+    .form-control {
+        font-size: 14px !important;
+    }
+
+    /* 9. Contact Section */
+    #contact .p-5 {
+        padding: 20px !important; /* Reduce the huge padding in the contact box */
+    }
+
+    /* 10. WhatsApp Button (Move it up so it doesn't hit the Action Bar) */
+    .whatsapp-float {
+        bottom: 80px !important;
+        right: 15px !important;
+    }
+}
