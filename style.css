@@ -896,7 +896,7 @@ h3 {
 #heroCarousel,
 .carousel-bg,
 .carousel-item {
-    height: 90vh;
+    height: 70vh;
     /* Same size as previous hero */
     min-height: 500px;
 }
@@ -1154,5 +1154,37 @@ li {
         width: 30px;
         /* Aligns icons vertically in the drawer */
         color: #FDB813;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* Reduce the height of the carousel container */
+    .carousel-item, 
+    .carousel-bg {
+        height: 70vh !important; /* vh = viewport height. 50vh is half the screen */
+        min-height: 350px !important; /* Ensures it doesn't get too squashed */
+    }
+
+    /* Adjust the text size so it fits the smaller area */
+    #heroCarousel h1, 
+    #heroCarousel h2 {
+        font-size: 1.8rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    #heroCarousel p, 
+    #heroCarousel li {
+        font-size: 0.9rem !important;
+    }
+
+    /* Make the padding smaller so content stays centered */
+    .carousel-bg .container {
+        padding-top: 20px;
+    }
+
+    /* Shrink buttons slightly for better fit */
+    .btn-lg {
+        padding: 10px 20px !important;
+        font-size: 0.9rem !important;
     }
 }
