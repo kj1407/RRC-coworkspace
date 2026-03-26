@@ -193,7 +193,7 @@ function confirmBooking() {
             - Email: ${email}`;
 
     // 4. Redirect to WhatsApp
-    const whatsappUrl = `https://wa.me/918903169940?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/919751182452?text=${encodeURIComponent(
         message
     )}`;
     window.open(whatsappUrl, '_blank');
