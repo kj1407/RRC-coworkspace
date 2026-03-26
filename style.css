@@ -642,21 +642,20 @@ body {
     .flip-card-back,
     .flip-card-front,
     .flip-card-inner {
-        height: 240px !important;
+        height: 280px !important;
         /* Increase this value until the button fits */
     }
 
     /* Adjust the font size slightly so it doesn't wrap as much */
     .flip-card-back ul li span {
         font-size: 0.85rem;
-        line-height: 1.2;
+        line-height: 1.4;
     }
 
     /* Reduce margins on mobile to save space */
     .flip-card-back h5 {
         margin-bottom: 10px !important;
     }
-
     .flip-card-back ul {
         margin-bottom: 15px !important;
         margin-left: 10px !important;
@@ -1316,3 +1315,4 @@ html {
     background: #fd9013; /* Brand Orange */
     width: 0%; /* Initial width */
 }
+
