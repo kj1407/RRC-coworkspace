@@ -1316,3 +1316,141 @@ html {
     width: 0%; /* Initial width */
 }
 
+/* Floating Booking Button Base */
+.booking-float {
+    position: fixed;
+    bottom: 100px; /* Positioned above the WhatsApp button (which is at 30px) */
+    right: 30px;
+    background: linear-gradient(rgb(247, 183, 33), rgba(238, 111, 13, 0.977));
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    opacity: 0; /* Hidden by default */
+    visibility: hidden;
+    transform: translateY(20px);
+}
+
+.booking-float:hover {
+    background-color: #e65c00;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.booking-float.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Mobile Tweaks to match WhatsApp button style */
+@media (max-width: 576px) {
+    .booking-float {
+        bottom: 85px; /* Adjust for smaller mobile WhatsApp button */
+        right: 20px;
+        width: 65px;
+        height: 55px;
+        border-radius: 50%;
+        padding: 0;
+    }
+    .booking-float .float-text {
+        display: none;
+    }
+}
+
+/* Fixed Availability Card */
+.availability-card-fixed {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    z-index: 1050;
+    border-left: 5px solid #FDB813; /* Green for "available" status */
+    transition: all 0.3s ease;
+}
+
+.availability-card-fixed:hover {
+    transform: translateY(-52%) scale(1.02);
+}
+
+/* Status Pulse Animation */
+.pulse-icon {
+    width: 12px;
+    height: 12px;
+    background-color: #FDB813;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    box-shadow: 0 0 0 0 #FDB813;
+    animation: pulse-green-status 2s infinite;
+}
+
+@keyframes pulse-green-status {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 #FDB813; }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(40, 167, 69, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+}
+
+.status-text {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #FDB813;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.btn-color-1{
+    background-color: #1B365D !important;
+    border: none !important;
+    color: #fff !important;
+    transition: 0.3s ease;
+}
+
+/* Hide on mobile to avoid cluttering floating buttons */
+@media (max-width: 992px) {
+    .availability-card-fixed {
+        display: none !important;
+    }
+}
+
+/* Mobile Availability Banner Styling */
+.pulse-icon-static {
+    width: 12px;
+    height: 12px;
+    background-color: #FDB813; /* Success Green */
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 0 0 #FDB813;
+    animation: pulse-green-mobile 2s infinite;
+}
+
+@keyframes pulse-green-mobile {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 #FDB813; }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(40, 167, 69, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+}
+
+#mobile-availability .availability-banner {
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+#mobile-availability .status-text {
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+}
