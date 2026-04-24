@@ -1454,3 +1454,9 @@ html {
     font-size: 0.7rem;
     letter-spacing: 0.5px;
 }
+
+.work-gallery-text .community-card-text {
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
